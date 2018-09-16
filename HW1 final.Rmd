@@ -36,6 +36,7 @@ kable(table)
 
 ![books](book.jpg)
 
+$p=e^{-\lambda}*{-\lambda}/{k!}$
 
 
 Cited: http://www.sundayassemblyla.org/book_club_0718
