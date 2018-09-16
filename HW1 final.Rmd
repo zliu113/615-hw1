@@ -1,0 +1,41 @@
+---
+title: "MA615 homework 01"
+author: "Zhaobin Liu"
+date: "Septemeber 16, 2018"
+
+
+output: pdf_document
+---
+```{r}
+pages = 1:50
+misprint = 0:6
+prob_misprint=ppois(q = misprint, lambda = 2, lower.tail = F)
+prob_misprint
+# set the pages and the misprints 
+# calculate the prob of misprint of zero through 6 
+```
+```{r}
+ProbOfMoreThankMistakes=pbinom(q = pages, size = 50, prob = prob_misprint, lower.tail = T)
+ProbOfMoreThankMistakes
+# Probability of T no more than n pages with more than k misprints
+
+
+```
+
+
+
+```{r}
+library(knitr)
+table=data.frame(matrix(ncol=7, nrow =50)) 
+for(i in 1:50){
+  table[i, ]=pbinom(i, 50, prob=prob_misprint, lower.tail = F) 
+} 
+kable(table)
+# make the table by the kable function 
+```
+
+![books](book.jpg)
+
+
+
+Cited: http://www.sundayassemblyla.org/book_club_0718
